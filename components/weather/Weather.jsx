@@ -58,7 +58,7 @@ const Weather = () => {
                 />
 
             </View>
-            {result && text && (
+            {result && text ? (
                 <View style={styles.showcontainer}>
                     <Image
                         source={fetchImage(result.weather[0].main)}
@@ -73,7 +73,11 @@ const Weather = () => {
                         
                     </View>
                 </View>
-            )}
+            ):
+            <View>
+                <Text>Yarr Chal na, Search kr na!!!</Text>
+            </View>
+            }
         </View>
     );
 };
